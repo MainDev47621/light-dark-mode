@@ -6,6 +6,7 @@
 
 body {
     background: #f7f0e9;
+    transition: .5s;
 }
 
 .container {
@@ -35,21 +36,29 @@ h1 {
 
 .slider {
     position: relative;
+    transition: .3s;
 }
 
 .slider::before {
     content: '';
     background: #fff;
     position: absolute;
-    top: .15em;
-    left: .15em;
-    width: 2.2em;
-    height: 2.2em;
+    top: .2em;
+    left: .2em;
+    width: 2.15em;
+    height: 2.15em;
     border-radius: 1.1em;
+    transition: .3s;
 }
 
-input:checked + .slider {
+/* input:checked + .slider {
     background: #b892ff;
+} */
+
+input:checked + .slider::before {
+    /* right: .15em; */
+    background: #b892ff;
+    left: 2.15em;
 }
 
 .dark-mode {
